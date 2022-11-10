@@ -1,4 +1,8 @@
 // main.cpp
+// compile and execute program with the
+// following command-line scripts:
+// $ g++ main.cpp -o calculator
+// $ ./calculator
 
 #include <iostream>
 
