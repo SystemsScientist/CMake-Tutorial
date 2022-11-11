@@ -1,14 +1,13 @@
 // main.cpp
 // compile and execute program with the
 // following command-line scripts:
-// $ g++ main.cpp -o calculator
+// $ g++ main.cpp addition.cpp division.cpp print_result.cpp -o calculator
 // $ ./calculator
 
 #include <iostream>
-
-float addition(float num1, float num2);
-float division(float num1, float num2);
-void print_result(std::string result_type, float result_value);
+#include "addition.h"
+#include "division.h"
+#include "print_result.h"
 
 int main() {
 
@@ -23,26 +22,8 @@ int main() {
 	result_add = addition(first_no, second_no);
 	result_div = division(first_no, second_no);
 
-	/* std::cout << "Addition result:\t" << result_add 
-		  << "\nDivision result:\t" << result_div 
-		  << "\n";
-	*/
-
 	print_result("Addition: ", result_add);
 	print_result("Division: ", result_div);
 
 	return 0;
-}
-
-float addition(float num1, float num2) {
-	return num1 + num2;	
-}
-
-float division(float num1, float num2) {
-	return num1 / num2;
-}
-
-void print_result(std::string result_type, float result_value) {
-	std::cout << result_type << " result:\t" 
-		  << result_value << "\n";
 }
